@@ -64,6 +64,10 @@ def iniciar_agente():
         elif comando == "salir":
             print("¡Hasta pronto!")
             ejecutando = False
+        elif comando == "recordar" :
+            print(procesar_comando_recordar(argumento))
+        elif comando == "uptime":
+            print(calcular_uptime(hora_inicio))
         else:
             print("Comando no reconocido")
 
