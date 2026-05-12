@@ -1,6 +1,6 @@
 import datetime
 
-def agregar_tarea(lista_tareas, descripcion)
+def agregar_tarea(lista_tareas, descripcion):
     """
     Agregar una tarea a la lista si cumple los requisitos
     """
@@ -66,7 +66,19 @@ def main():
         #selección de acción
         if comando == "add":
             resultado = agregar_tarea(tareas, argumento)
-            print(resultado)
+        elif comando == "list":
+            print(listar_tareas(tareas))
+            
+        elif comando == "del":
+            print(eliminar_tarea(tareas, argumento))
+            
+        else:
+            print(f" Error: Comando '!{comando}' no reconocido.")
+        
+        print("-" * 20)
+
+if __name__ == "__main__":
+    main()
 
 
 
