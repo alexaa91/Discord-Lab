@@ -2,6 +2,7 @@ import discord
 import os
 import re
 from dotenv import load_dotenv
+import datetime
 
 def mostrar_bienvenida():
     """Retorna la lista de comandos disponibles."""
@@ -31,7 +32,10 @@ def main(entrada):
         elif comando == "inicio":
             print(mostrar_bienvenida())
             return mostrar_bienvenida()
-            
+        
+        elif comando == "hora":
+            ahora = datetime.datetime.now().strftime("%H:%M:%S")
+            return f" Hora actual: {ahora}"
             
         else:
             print(f" Error: Comando '!{comando}' no reconocido.")
