@@ -3,7 +3,7 @@ import discord
 import os
 import re
 from dotenv import load_dotenv
-from practica_02.gestor_comandos import buscar_en_diccionario, validar_variable
+from practica_01.gestor_comandos import buscar_en_diccionario, validar_variable
 
 hora_inicio = datetime.datetime.now()
 
@@ -97,7 +97,7 @@ async def on_message(message):
         await message.channel.send(f" *Bot Procesador:* {resultado}")
     
 # Ejecutar el bot
-if _name_ == "_main_":
+if __name__ == "__main__":
     if TOKEN:
         client.run(TOKEN)
     else:
