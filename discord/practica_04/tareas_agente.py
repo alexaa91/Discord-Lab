@@ -59,7 +59,7 @@ def main():
             continue
 
         #procesamiento de la entrada
-        cuerpo = entrada[len(PREFIJO):].spli(maxsplit=1)
+        cuerpo = entrada[len(PREFIJO):].split(maxsplit=1)
         comando = cuerpo[0].lower()
         argumento = cuerpo[1] if len(cuerpo) > 1 else ""
 
