@@ -1,4 +1,4 @@
-from tareas_agente import (
+from practica_04.tareas_agente import (
     agregar_tarea,
     listar_tareas,
     eliminar_tarea
@@ -51,4 +51,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
